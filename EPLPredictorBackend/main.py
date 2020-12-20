@@ -6,17 +6,6 @@ import aiohttp
 from understat import Understat
 from teamClass import Team
 from result import Result
-from openpyxl import Workbook
-
-
-async def load_results():
-    async with aiohttp.ClientSession() as session:
-        understat = Understat(session)
-        results = await understat.get_league_results(
-            "epl", 2020,
-        )
-        return results
-
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
