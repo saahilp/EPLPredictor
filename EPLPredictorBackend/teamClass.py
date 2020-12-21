@@ -55,7 +55,7 @@ class Team:
 
 
     def init_weight_array(self):
-        self.weight = [float(0)] * 38
+        self.weight = [float(0)] * len(self.results)
         for i in range(0, len(self.results)-9):
             self.weight[i] = float(1)
         for i in (range(1, 10)):
