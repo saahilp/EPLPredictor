@@ -10,9 +10,11 @@ from teamClass import Team
 from result import Result
 from json import JSONEncoder
 from table import TableEntry, Table
+from flask_cors import CORS
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
+CORS(app)
 
 
 @app.route('/api/results', methods=['GET'])
@@ -82,7 +84,7 @@ def get_results():
         awayTeam[0].add_result(Result(float(awayScore), float(homeScore), float(awayPoss), False))
 
         # print(home_team_name, numpy.round(homeScore), away_team_name, numpy.round(awayScore))
-        resultsList.append([home_team_name, numpy.round(homeScore), away_team_name, numpy.round(awayScore)])
+        resultsList.append([home_team_name, numpy.round(homeScore), away_team_name, numpy.round(awayScore), fixture_date])
 
     return json.dumps({"results": resultsList}, cls=NumpyArrayEncoder)
 
@@ -134,5 +136,4 @@ class NumpyArrayEncoder(JSONEncoder):
         return JSONEncoder.default(self, obj)
 
 
-get_table()
 app.run()

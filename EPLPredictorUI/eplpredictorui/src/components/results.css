@@ -1,0 +1,22 @@
+.resultsPageContainer {
+    text-align: center;
+    margin-top: 2%
+}
+
+.headerContainer {
+    display: inline-block;
+}
+
+.headerComp {
+    display: inline-block;
+}
+
+.resultsContainer {
+    margin-top: 2%;
+    text-align: center;
+    justify-content: center
+}
+
+.resultsComp {
+    display: inline-block;
+}

@@ -1,0 +1,11 @@
+.rows>:nth-child(-n+4) {
+    background-color: lightgreen;
+}
+
+.rows>:nth-last-child(-n+3) {
+    background-color: lightcoral;
+}
+
+.rows>:nth-child(5) {
+    background-color: lightblue;
+}
