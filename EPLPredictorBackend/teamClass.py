@@ -59,7 +59,7 @@ class Team:
         for i in range(0, len(self.results)-9):
             self.weight[i] = float(1)
         for i in (range(1, 10)):
-            self.weight[len(self.results)-10+i] = float(i+1)
+            self.weight[len(self.results)-10+i] = float((i*0.2)+1)
 
     def diffInRation(self):
 
